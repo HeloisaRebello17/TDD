@@ -40,6 +40,27 @@ describe('Teste da calculadora', () => {
     )
     it('Operação de Mult', () => {
         let resultado = calculadora.mult(1, 2);
-        expect(resultado).toEqual(-1)
+        expect(resultado).toEqual(2)
+
+        resultado = calculadora.mult(3, 2);
+        expect(resultado).toEqual(6)
+
+        resultado = calculadora.mult(4, 2);
+        expect(resultado).toEqual(8)
+
+        resultado = calculadora.mult(5, 2);
+        expect(resultado).toEqual(10)
+
+        resultado = calculadora.mult(6, 2);
+        expect(resultado).toEqual(12)
+
+        resultado = calculadora.mult(7, 2);
+        expect(resultado).toEqual(14)
+
+        resultado = calculadora.mult(8, 2);
+        expect(resultado).toEqual(16)
+
+        resultado = calculadora.mult(9, 2);
+        expect(resultado).toEqual(18)
 })
 })
