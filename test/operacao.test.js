@@ -64,7 +64,7 @@ describe('Teste da calculadora', () => {
         expect(resultado).toEqual(18)
     })
     it('Operação de Divisão', () => {
-        let resultado = calculadora.div(4, 2);
+        let resultado = calculadora.div(0, 2);
         expect(resultado).toEqual(2)
 
         resultado = calculadora.div(6, 2);
@@ -98,8 +98,8 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.raiz(9);
         expect(resultado).toEqual(3)
 
-        resultado = calculadora.raiz(16);
-        expect(resultado).toEqual(4)
+        resultado = calculadora.raiz(-16);
+        expect(resultado).toThrow('Não é número')
 
         resultado = calculadora.raiz(25);
         expect(resultado).toEqual(5)
@@ -111,8 +111,8 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.poten(2,3);
         expect(resultado).toEqual(8)
 
-        resultado = calculadora.poten(2,4);
-        expect(resultado).toEqual(16)
+        resultado = calculadora.poten(0,4);
+        expect(resultado).toThrow('Não é número')
 
         resultado = calculadora.poten(2,5);
         expect(resultado).toEqual(32)

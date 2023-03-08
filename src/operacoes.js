@@ -40,7 +40,7 @@ function raiz(num1) {
 }
 
 function poten(num1, num2) {
-    if (isNaN(num1) < 0) {
+    if (isNaN(num1,num2) < 0) {
         throw "Não é número"
     }
     if (isNaN(num1) || isNaN(num2)) {
