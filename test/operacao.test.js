@@ -27,8 +27,8 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.sub(3, 2);
         expect(resultado).toEqual(1)
 
-        resultado = calculadora.sub(4, 2);
-        expect(resultado).toEqual(2)
+        resultado = calculadora.sub("a", 2);
+        expect(resultado).toThrow('Não é número')
 
         resultado = calculadora.sub(5, 2);
         expect(resultado).toEqual(3)
@@ -36,17 +36,17 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.sub(6, 2);
         expect(resultado).toEqual(4)
 
-    }
-    )
+    })
     it('Operação de Mult', () => {
         let resultado = calculadora.mult(1, 2);
         expect(resultado).toEqual(2)
 
-        resultado = calculadora.mult(3, 2);
-        expect(resultado).toEqual(6)
+        resultado = calculadora.mult(0, 2);
+        expect(resultado).toThrow('Não é possível')
 
-        resultado = calculadora.mult(4, 2);
-        expect(resultado).toEqual(8)
+        resultado = calculadora.mult("a", 2);
+        expect(resultado).toThrow('Não é número')
+        
 
         resultado = calculadora.mult(5, 2);
         expect(resultado).toEqual(10)
@@ -73,8 +73,8 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.div(8, 2);
         expect(resultado).toEqual(4)
 
-        resultado = calculadora.div(10, 2);
-        expect(resultado).toEqual(5)
+        resultado = calculadora.div("a", 2);
+        expect(resultado).toThrow('Não é possível')
 
         resultado = calculadora.div(12, 2);
         expect(resultado).toEqual(6)

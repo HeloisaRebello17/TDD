@@ -5,12 +5,16 @@ function sum(num1, num2) {
     return num1 + num2
 }
 function sub(num1, num2) {
+   
     if (isNaN(num1) || isNaN(num2)) {
         throw "Não é número"
     }
     return num1 - num2
 }
 function mult(num1, num2) {
+    if(num1==0||num2==0){
+        throw "Não é possível"
+    }
     if (isNaN(num1) || isNaN(num2)) {
         throw "Não é número"
     }
@@ -20,10 +24,15 @@ function div(num1, num2) {
     if (isNaN(num1) || isNaN(num2)) {
         throw "Não é número"
     }
+    if(num1==0||num2==0){
+        throw "Não é possível"
+    }
+    
     return num1 / num2
 }
 
 function raiz(num1) {
+ 
     if (isNaN(num1) < 0) {
         throw "Não é número"
     }
@@ -32,6 +41,9 @@ function raiz(num1) {
 
 function poten(num1, num2) {
     if (isNaN(num1) < 0) {
+        throw "Não é número"
+    }
+    if (isNaN(num1) || isNaN(num2)) {
         throw "Não é número"
     }
     return Math.pow(num1, num2)
