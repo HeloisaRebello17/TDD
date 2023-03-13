@@ -27,7 +27,7 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.sub(3, 2);
         expect(resultado).toEqual(1)
 
-        resultado = calculadora.sub("a", 2);
+        resultado = () => calculadora.sub("a", 2);
         expect(resultado).toThrow('Não é número')
 
         resultado = calculadora.sub(5, 2);
@@ -41,13 +41,12 @@ describe('Teste da calculadora', () => {
         let resultado = calculadora.mult(1, 2);
         expect(resultado).toEqual(2)
 
-        resultado = calculadora.mult(0, 2);
+        resultado = () => calculadora.mult(0, 2);
         expect(resultado).toThrow('Não é possível')
 
-        resultado = calculadora.mult("a", 2);
+        resultado = () => calculadora.mult("a", 2);
         expect(resultado).toThrow('Não é número')
         
-
         resultado = calculadora.mult(5, 2);
         expect(resultado).toEqual(10)
 
@@ -60,12 +59,12 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.mult(8, 2);
         expect(resultado).toEqual(16)
 
-        resultado = calculadora.mult(9, 2);
-        expect(resultado).toEqual(18)
+        resultado = calculadora.mult(-9, 2);
+        expect(resultado).toEqual(-18)
     })
     it('Operação de Divisão', () => {
-        let resultado = calculadora.div(0, 2);
-        expect(resultado).toEqual(2)
+        let resultado = calculadora.div(2, 2);
+        expect(resultado).toEqual(1)
 
         resultado = calculadora.div(6, 2);
         expect(resultado).toEqual(3)
@@ -73,14 +72,14 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.div(8, 2);
         expect(resultado).toEqual(4)
 
-        resultado = calculadora.div("a", 2);
-        expect(resultado).toThrow('Não é possível')
+        resultado = () =>  calculadora.div("a", 2);
+        expect(resultado).toThrow('Não é número')
 
         resultado = calculadora.div(12, 2);
         expect(resultado).toEqual(6)
 
-        resultado = calculadora.div(14, 2);
-        expect(resultado).toEqual(7)
+        resultado = () => calculadora.div(0, 2);
+        expect(resultado).toThrow('Não é possível')
 
         resultado = calculadora.div(16, 2);
         expect(resultado).toEqual(8)
@@ -98,21 +97,21 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.raiz(9);
         expect(resultado).toEqual(3)
 
-        resultado = calculadora.raiz(-16);
-        expect(resultado).toThrow('Não é número')
+        resultado = () =>  calculadora.raiz(-16);
+        expect(resultado).toThrow('Não é possível')
 
-        resultado = calculadora.raiz(25);
-        expect(resultado).toEqual(5)
+        resultado = () => calculadora.raiz("a");
+        expect(resultado).toThrow('Não é número')
     })
     it('Operação de Potência', () => {
         let resultado = calculadora.poten(2,2);
         expect(resultado).toEqual(4)
 
-        resultado = calculadora.poten(2,3);
+        resultado =  calculadora.poten(2,3);
         expect(resultado).toEqual(8)
 
-        resultado = calculadora.poten(0,4);
-        expect(resultado).toThrow('Não é número')
+        resultado = () => calculadora.poten(0,4);
+        expect(resultado).toThrow('Não é possível')
 
         resultado = calculadora.poten(2,5);
         expect(resultado).toEqual(32)
@@ -120,8 +119,8 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.poten(2,6);
         expect(resultado).toEqual(64)
 
-        resultado = calculadora.poten(3,2);
-        expect(resultado).toEqual(9)
+        resultado = () =>  calculadora.poten("a", 2);
+        expect(resultado).toThrow('Não é número')
 
         resultado = calculadora.poten(3,3);
         expect(resultado).toEqual(27)
@@ -129,8 +128,8 @@ describe('Teste da calculadora', () => {
         resultado = calculadora.poten(3,4);
         expect(resultado).toEqual(81)
 
-        resultado = calculadora.poten(3,5);
-        expect(resultado).toEqual(243)
+        resultado = calculadora.poten(-3,5);
+        expect(resultado).toEqual(-243)
 
         
     })

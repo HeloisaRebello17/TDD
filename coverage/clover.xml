@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1678737645850" clover="3.2.0">
+  <project timestamp="1678737645850" name="All files">
+    <metrics statements="27" coveredstatements="27" conditionals="36" coveredconditionals="36" methods="6" coveredmethods="6" elements="69" coveredelements="69" complexity="0" loc="27" ncloc="27" packages="1" files="1" classes="1"/>
+    <file name="operacoes.js" path="C:\Users\heloisa.cabral\TDD\src\operacoes.js">
+      <metrics statements="27" coveredstatements="27" conditionals="36" coveredconditionals="36" methods="6" coveredmethods="6"/>
+      <line num="2" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="9" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="15" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="18" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="21" count="6" type="stmt"/>
+      <line num="24" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="27" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="31" count="7" type="stmt"/>
+      <line num="35" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="39" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="42" count="2" type="stmt"/>
+      <line num="46" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="49" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="50" count="1" type="stmt"/>
+      <line num="52" count="7" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
